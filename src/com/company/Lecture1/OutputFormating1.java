@@ -62,7 +62,18 @@ public class OutputFormating1 {
     }
 
     public static void solve3() {
+//        precision in string formatting = max number of chars. allowed
 
+        String name = "Pankaj Tripathi";
+
+        String firstName = "Harshit";
+        String lastName = "Jaiswal";
+
+
+        String fName = "Shiv";
+        String lName = "Bhosle";
+
+        System.out.printf("Name = %.1s. %s", firstName, lastName);
     }
 
     public static void main(String[] args) {
@@ -74,8 +85,10 @@ public class OutputFormating1 {
 //        System.out.printf( locale, format, arguments )
 
         solve1();
+        System.out.printf("%n");
         solve2();
-//        solve3();
+        System.out.printf("%n");
+        solve3();
     }
 
 }
