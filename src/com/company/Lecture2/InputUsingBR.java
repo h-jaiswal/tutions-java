@@ -17,6 +17,8 @@ public class InputUsingBR {
         double d = Double.parseDouble( br.readLine() );
 
         String s = br.readLine();
+
+        br.close();
     }
 
 }
