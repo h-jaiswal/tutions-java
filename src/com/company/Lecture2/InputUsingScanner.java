@@ -9,7 +9,7 @@ public class InputUsingScanner {
 //    NOTE - use only one scanner object
 //    Always close it at the end
 
-    public static Scanner scanner = new Scanner(System.in);  // NOTE the import
+    public static Scanner scanner = new Scanner(System.in);  // NOTE the import  // class variable
 
     public static void solve1() {
 
@@ -29,28 +29,54 @@ public class InputUsingScanner {
 
     public static void solve2() {
 
-//        inputting a String after inputting a number or other type
+//        inputting a String immediately after inputting a number or other type
 
+        System.out.print("Enter number: ");
         int num = scanner.nextInt();
 
         scanner.nextLine();
 
+        System.out.print("Enter a string: ");
         String str = scanner.nextLine();  // or scanner.next() whichever needed
+
+        System.out.println(num);
+
+        System.out.println(str);
+        System.out.println("END");
+
     }
 
     public static void solve3() {
 
-//        for Later
+//        input a string and store it as StringBuilder object
 
-//
-//        StringBuilder str = new StringBuilder( scanner.nextLine() );
+        StringBuilder str = new StringBuilder( scanner.nextLine() );
+        System.out.println( str );
 
 
-//
+//        input an int array
+
+//        Values are separated by single space
         int[] arr = Arrays.stream( scanner.nextLine().split(" ") ).mapToInt(Integer::parseInt).toArray();
+        System.out.println( Arrays.toString(arr) );
 
-        System.out.println(Arrays.toString(arr));
 
+//        values are separated by comma+space
+        arr = Arrays.stream( scanner.nextLine().split(", ") ).mapToInt(Integer::parseInt).toArray();
+        System.out.println( Arrays.toString(arr) );
+
+
+//        values are separated by a comma only
+        arr = Arrays.stream( scanner.nextLine().split(",") ).mapToInt(Integer::parseInt).toArray();
+        System.out.println( Arrays.toString(arr) );
+
+
+
+
+//        input a double array
+
+        double[] heights = Arrays.stream( scanner.nextLine().split( " " ) ).mapToDouble(Double::parseDouble).toArray();
+        System.out.println( Arrays.toString(heights) );
 
     }
     public static void main(String[] args) {
