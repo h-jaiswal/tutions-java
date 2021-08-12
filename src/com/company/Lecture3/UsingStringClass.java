@@ -1,6 +1,7 @@
 package com.company.Lecture3;
 
 
+import java.util.Arrays;
 import java.util.Locale;
 
 public class UsingStringClass {
@@ -136,8 +137,9 @@ public class UsingStringClass {
         System.out.println(s6);
         System.out.println(s7);
 
-
-
+//        This method converts a String object to a character array
+        char[] chArr2 = s5.toCharArray();
+        System.out.println( "\n" + Arrays.toString( chArr2 ) + "\n");
 
         solve1();
 
