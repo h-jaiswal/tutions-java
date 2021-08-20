@@ -51,6 +51,10 @@ public class InputUsingScanner {
 //        input a string and store it as StringBuilder object
 
         StringBuilder str = new StringBuilder( scanner.nextLine() );
+
+//        String temp = scanner.nextLine();
+//        StringBuilder str = new StringBuilder( temp );
+
         System.out.println( str );
 
 

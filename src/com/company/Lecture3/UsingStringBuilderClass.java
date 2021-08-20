@@ -38,7 +38,7 @@ public class UsingStringBuilderClass {
         */
         System.out.println(s2.capacity());
 
-
+//        setLength() method
         s2.setLength(10);
         System.out.println(s2);
 
@@ -86,7 +86,7 @@ public class UsingStringBuilderClass {
         StringBuilder str = new StringBuilder("Harshit");
         System.out.println(str);
 
-        str.append(" Jaiswal");
+        str.append(" Jaiswal");   // inplace + return
         System.out.println(str);
 
 /*
@@ -120,7 +120,22 @@ public class UsingStringBuilderClass {
         StringBuilder reverse(): This method causes this character sequence to be replaced by the reverse of the sequence.
 */
 
+        StringBuilder name1 = new StringBuilder("Harshit Jaiswal");
+        StringBuilder name2 = new StringBuilder("Raj Roy");
 
+
+        name1.replace( 1, name1.indexOf(" "), "." );   // inplace + return
+        name2.replace( 1, name2.indexOf(" "), "." );
+
+        System.out.println(name1);
+
+        System.out.println(name2);
+
+
+        name1.reverse();  // inplace + return
+        System.out.println(name1);
+
+        System.out.println(name2.reverse());
     }
 
 

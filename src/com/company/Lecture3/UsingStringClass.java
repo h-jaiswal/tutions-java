@@ -2,27 +2,30 @@ package com.company.Lecture3;
 
 
 import java.util.Arrays;
-import java.util.Locale;
 
 public class UsingStringClass {
     public static void solve1() {
         String str = "My name is mimi momo";
 
-        int size = str.length();
+        int size = str.length();  // length() method return the number of character in the string
+//        str is the calling object for the method length()
         System.out.println(size);
 
 
 
         System.out.println(str.charAt(0));
         System.out.println(str.charAt(6));
-        System.out.println(str.charAt(str.length() - 1));
+        System.out.println(str.charAt(str.length() - 1));   // last char,    str.length()-1  is the index of last char
 
 
+        // return index of first occurrence
+        System.out.println(str.indexOf("m"));
+        System.out.println(str.indexOf("mi"));
+        System.out.println(str.indexOf("mi", 14));
 
-        str.indexOf("m");
-        str.indexOf("mi");
-        str.indexOf("mi", 14);
-        str.indexOf( "mi", str.indexOf("mi") ); // second occurrence
+
+        System.out.println(str.indexOf("mi", str.indexOf("mi") + 1)); // second occurence
+        System.out.println(str.indexOf(    "mi", str.indexOf(  "mi", str.indexOf("mi")+1  ) +1)   );
 
 
         str.lastIndexOf("mi");
@@ -37,7 +40,6 @@ public class UsingStringClass {
         System.out.println( s1 );
         System.out.println( s2 );
         System.out.println( s3 );
-
 
     }
 
@@ -61,14 +63,16 @@ public class UsingStringClass {
     public static void solve3() {
         String s1 = "Harshit jaiswal";
 
-        System.out.println( s1.toLowerCase() );
+        System.out.println( s1.toLowerCase() );     // returns required result
 
-        System.out.println( s1.toUpperCase() );
+        System.out.println( s1.toUpperCase() );     // returns required result
 
         System.out.println( s1 );
 
-        s1 = s1.trim();
+        s1 = "     Harsh  Jaiswal       ";
+        System.out.println(s1);
 
+        s1 = s1.trim();     // trim() return requ. result
         System.out.println(s1);
     }
 
@@ -80,10 +84,13 @@ public class UsingStringClass {
 
         String s4 = new String("Harshit");
 
+//        == operator consider  value and mem. location both for comparing
         System.out.println( s1 == s2 );
         System.out.println( s3 == s4 );
 
         System.out.println( s1 == s3 );
+
+//        equals method consider  value ONLY for comparing
 
         System.out.println( s1.equals(s2) );
         System.out.println( s3.equals(s4) );
@@ -142,11 +149,11 @@ public class UsingStringClass {
         System.out.println( "\n" + Arrays.toString( chArr2 ) + "\n");
 
         solve1();
-
+        System.out.println();
         solve2();
-
+        System.out.println();
         solve3();
-
+        System.out.println();
         solve4();
     }
 }
