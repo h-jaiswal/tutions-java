@@ -23,7 +23,7 @@ public class UnderstandingIfElse {
         }
     }
 
-    public static void solve2() {
+    public static void solve21() {
         int a = scanner.nextInt();
         int b = scanner.nextInt();
 
@@ -32,6 +32,20 @@ public class UnderstandingIfElse {
         } else {
             System.out.printf("%d is Greater.%n", b);
         }
+    }
+
+    public static void solve22() {
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+
+        int max;
+        if (a > b) {
+            max = a;
+        } else {
+            max = b;
+        }
+
+        System.out.printf("%d is Greater.%n", max);
     }
 
     public static void solve31() {
@@ -58,22 +72,22 @@ public class UnderstandingIfElse {
         int a = scanner.nextInt();
         int b = scanner.nextInt();
         int c = scanner.nextInt();
-        int largest;
+        int max;
         if (a > b) {
             if (a > c) {
-                largest = a;
+                max = a;
             } else {
-                largest = c;
+                max = c;
             }
         } else {
             if (b > c) {
-                largest = b;
+                max = b;
             } else {
-                largest = c;
+                max = c;
             }
         }
 
-        System.out.printf("%d is Largest.%n", largest);
+        System.out.printf("%d is Largest.%n", max);
     }
 
     public static void solve32() {
@@ -95,6 +109,7 @@ public class UnderstandingIfElse {
         int b = scanner.nextInt();
         int c = scanner.nextInt();
 
+//        if else nesting + ladder/chaining
         if (a > b) {
             if (a > c) {
                 System.out.printf("%d is Largest%n", a);
@@ -111,6 +126,9 @@ public class UnderstandingIfElse {
         int b = scanner.nextInt();
         int c = scanner.nextInt();
 
+//        nesting in ternary operator
+//        this is equivalent to nesting if-else example done previously
+
         int largest = a>b ? (a > c ? a : c) : (b > c? b :c);
 
         System.out.printf("%d is Largest", largest);
@@ -120,6 +138,8 @@ public class UnderstandingIfElse {
 
         int marks = scanner.nextInt();
         char grade = 'F';
+
+//        if else ladder/chain
 
         if (marks > 90) {
             grade = 'A';
@@ -135,11 +155,14 @@ public class UnderstandingIfElse {
 
         System.out.printf("Marks : %d%nGrade : %c%n", marks, grade);
      }
-    public static void main(String[] args) {
+
+
+        public static void main(String[] args) {
         solve11();
         solve12();
 
-        solve2();
+        solve21();
+        solve22();
 
         solve31();
         solve311();
